@@ -14,9 +14,12 @@
         android:theme="@style/Theme.Portfolio3"
         tools:targetApi="31">
         <activity
+            android:name=".ProjectScreen"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,17 +29,15 @@
         <activity
             android:name=".GithubActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ProjectDetails"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

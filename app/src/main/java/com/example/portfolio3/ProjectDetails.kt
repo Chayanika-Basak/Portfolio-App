@@ -1,9 +1,11 @@
 package com.example.portfolio3
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_project_details.*
 
 class ProjectDetails : AppCompatActivity() {
@@ -14,17 +16,18 @@ class ProjectDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project_details)
         window.decorView.apply{systemUiVisibility= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN}
+
         obj=intent.getParcelableExtra("project")!!
         projectImg=intent.getIntExtra("projectImage",-1)
         iconImg=intent.getIntExtra("iconImage",-1)
-        setData(obj, projectImg!!)
+        setData(obj, projectImg!!, iconImg!!)
 
         button_info.setOnClickListener{
-            val intent= Intent(this, GithubActivity::class.java)
+            val intent= Intent(Intent.ACTION_VIEW, Uri.parse(obj.link))
             startActivity(intent)
         }
     }
-    private fun setData(obj:ProjectData,projectImg:Int){
+    private fun setData(obj:ProjectData,projectImg:Int, iconImg:Int){
         title_info.text=obj.title
         tech_stack_info.text=obj.techStack
         type_info.text=obj.type

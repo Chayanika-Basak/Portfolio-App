@@ -4,27 +4,604 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/primary"
-    android:orientation="vertical">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:background="@drawable/bg_header"
-    android:orientation="horizontal"
-    android:layout_marginBottom="20dp">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Portfolio"
-    android:gravity="start|bottom"
-    android:layout_marginLeft="15dp"
-    android:textColor="@color/white"
-    android:textSize="22sp"
-    android:fontFamily="@font/avalor"/>
-</LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/my_recycler"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_header"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/avalor"
+            android:gravity="start|bottom"
+            android:text="Portfolio"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:src="@drawable/displaypic">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stanley"
+                android:text="Chayanika Basak"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/restora"
+                android:text="BTech CSAI '25"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/restora"
+                android:text="Indira Gandhi Delhi Technical University for Women"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/restora"
+                android:text="chayanika071btcsai21@igdtuw.ac.in"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/avalor"
+                android:letterSpacing="0.1"
+                android:text="Education"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#03A9F4" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#404258"
+                        android:layout_marginHorizontal="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Indira Gandhi Delhi Technical University for Women, New Delhi, India"
+                                android:textAllCaps="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="Btech: Computer Science Engineering (Artificial Intelligence)"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="January 2022 - Current"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#404258"
+                        android:layout_marginHorizontal="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Green Fields School, New Delhi, India"
+                                android:textAllCaps="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="12th Standard"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="April 2019 - March 2020"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="Secured 96.6% in CBSE Board Examination"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:backgroundTint="#404258"
+                        android:layout_marginHorizontal="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Green Fields School, New Delhi, India"
+                                android:textAllCaps="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="10th Standard"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="April 2017 - March 2018"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="Secured 95% in CBSE Board Examination"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avalor"
+                android:letterSpacing="0.1"
+                android:text="Skills"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#03A9F4" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="C++"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="MERN Stack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Python"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Java"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Kotlin"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="#404258"
+                            android:layout_marginHorizontal="20dp"
+                            app:cardCornerRadius="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="30dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Flutter"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/avalor"
+                android:letterSpacing="0.1"
+                android:text="Accomplishments"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#03A9F4" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#404258"
+                        android:layout_marginHorizontal="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Codechef"
+                                android:textAllCaps="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="Was selected for codechef evolution mentee program in February, 2022"
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:backgroundTint="#404258"
+                        android:layout_marginHorizontal="20dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/tenderness"
+                                android:text="Ideate2Sustain, Innerve 2022"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:fontFamily="@font/restora"
+                                android:letterSpacing="0.1"
+                                android:text="Winner of Ideate2Sustain under the track of Sustainable Fashion."
+                                android:textColor="#B9E0FF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="20dp"
+                android:backgroundTint="@color/secondary"
+                android:fontFamily="@font/restora"
+                android:onClick="switchActivity"
+                android:text="My Projects"
+                android:textColor="@color/white"></Button>
+
+            <Button
+                android:id="@+id/linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/secondary"
+                android:fontFamily="@font/restora"
+                android:text="Linkedin"
+                android:textColor="@color/white"></Button>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

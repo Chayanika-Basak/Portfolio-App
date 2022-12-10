@@ -56,7 +56,6 @@
                 android:text="https://github.com/Chayanika-Basak/Twitter-Sentiment-Analysis "
                 android:textColor="@color/subtext"
                 android:textSize="18sp"
-                android:onClick="gitLink"
                 />
         </LinearLayout>
 
